@@ -1,4 +1,13 @@
-﻿Remove-Item D:\genmunis\temp\* -Recurse
+<#
+Author: CMJ Grubb
+Date: 08/19/2021
+
+Description: This script deletes temporary files from our munisapp server. It was written for 11.3. BE VERY CAREFUL! THIS SCRIPT DELETES STUFF!
+
+Dependencies: ImportExcel module by Doug Finke - https://github.com/dfinke/ImportExcel
+#>
+
+Remove-Item D:\genmunis\temp\* -Recurse
 Remove-Item D:\genmunis\temp_Live\* -Recurse
 Remove-Item D:\genmunis\temp_Train\* -Recurse
 Remove-Item D:\genmunis\temp_Verif\* -Recurse

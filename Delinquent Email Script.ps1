@@ -11,7 +11,7 @@ Dependencies: ImportExcel module by Doug Finke - https://github.com/dfinke/Impor
 $cutoffDate = Read-Host 'Please enter the cut-off date: '
 
 # Read the date in from the Excel file
-$data = Import-Excel "Delinquent Notices Test File.xlsx"
+$data = Import-Excel "*.xlsx"
 
 # Get credentials for sending E-mail
 $credential = Get-Credential

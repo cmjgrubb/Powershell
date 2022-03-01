@@ -8,3 +8,5 @@ The 'Delinquent Email Script.ps1' reads information from an Excel file called 'D
 The munisapp-cleanup.ps1 cleans up temporary files from our munisapp server. I created this in version 11.3. BE VERY CAREFUL WITH THIS SCRIPT! IT DELETES STUFF!
 
 The copyDbexport.ps1 copies our database backup and adds the date to the filename.
+
+The microsoftUpdate.ps1 runs Microsoft Update, including Sharepoint updates.

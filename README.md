@@ -10,3 +10,5 @@ The munisapp-cleanup.ps1 cleans up temporary files from our munisapp server. I c
 The copyDbexport.ps1 copies our database backup and adds the date to the filename.
 
 The microsoftUpdate.ps1 runs Microsoft Update, including Sharepoint updates.
+
+The veeamInstallationPrep.ps1 prepares a non-domain computer to back up to Veeam Backup and Replication.

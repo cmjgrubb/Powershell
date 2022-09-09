@@ -6,7 +6,7 @@ Description: This script prepares a non-domain computer for Veeam Backup and Rep
 #>
 
 # Enable file and printer sharing
-Set-NetFirewallRule -DisplayGroup "File And Printer Sharing" -Enabled False -Profile Any
+Set-NetFirewallRule -DisplayGroup "File And Printer Sharing" -Enabled True -Profile Any
 
 # Disable SMB1 and enable SMB 2/3
 Set-SmbServerConfiguration -EnableSMB1Protocol $false

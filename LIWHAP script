@@ -1,0 +1,33 @@
+ <#
+Author: CMJ Grubb
+Date: 03/08/2023
+
+Description: This script combines fields from two different Excel files and combines them into one based on account number.
+#>
+
+# Read the data in from the aging report
+$agingData = Import-Excel "aging.xlsx"
+
+# Add fields to $agingData
+$agingData | Add-Member -MemberType NoteProperty -Name ZIP_code -Value ""
+$agingData | Add-Member -MemberType NoteProperty -Name Five_Digit_ZIP -Value ""
+$agingData | Add-Member -MemberType NoteProperty -Name Account_Customer -Value ""
+
+# Read the data in from the UB Accounts
+$ubaccountsData = Import-Excel "ubaccounts.xlsx"
+
+$i = 2
+
+foreach ($agingField in $agingData) {
+    foreach ($ubaccountsField in $ubaccountsData) {
+    if ($agingField.Account -eq $ubaccountsField.Account) {
+        $agingField.ZIP_code = $ubaccountsField.ZIP_code
+        $agingField.Five_Digit_ZIP = '=LEFT(O' + $i + ', 5)'
+        $agingField.Account_Customer = '=CONCAT(A' + $i + ', "-", B' + $i + ')'
+        $i += 1
+        break
+        }
+    }
+}
+
+$agingData|Export-Excel -Path "combined.xlsx" 

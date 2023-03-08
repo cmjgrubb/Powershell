@@ -12,3 +12,5 @@ The copyDbexport.ps1 copies our database backup and adds the date to the filenam
 The microsoftUpdate.ps1 runs Microsoft Update, including Sharepoint updates.
 
 The veeamInstallationPrep.ps1 prepares a non-domain computer to back up to Veeam Backup and Replication.
+
+The LIWHAP script.ps1 combines two Excel files base on a common field - account number.

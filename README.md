@@ -14,3 +14,5 @@ The microsoftUpdate.ps1 runs Microsoft Update, including Sharepoint updates.
 The veeamInstallationPrep.ps1 prepares a non-domain computer to back up to Veeam Backup and Replication.
 
 The LIWHAP script.ps1 combines two Excel files base on a common field - account number.
+
+new accounts.ps1 will iterates through two Excel spreadsheets. If a row is missing from one, it creates a row in a new spreadsheet.
